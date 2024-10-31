@@ -1,3 +1,4 @@
+# Ignore these files and folders on git push
 .DS_Store
 node_modules
 package-lock.json
