@@ -5,17 +5,17 @@ DROP DATABASE IF EXISTS ecommerce_db;
 CREATE DATABASE ecommerce_db;
 
 -- Use the newly created database
-USE ecommerce_db;
+\c ecommerce_db;
 
 -- Create table for categories
 CREATE TABLE categories (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   category_name VARCHAR(100) NOT NULL
 );
 
 -- Create table for products
 CREATE TABLE products (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   product_name VARCHAR(100) NOT NULL,
   price DECIMAL(10, 2) NOT NULL,
   stock INT NOT NULL DEFAULT 10,
@@ -25,13 +25,13 @@ CREATE TABLE products (
 
 -- Create table for tags
 CREATE TABLE tags (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   tag_name VARCHAR(100)
 );
 
 -- Create junction table for many-to-many relationship between products and tags
 CREATE TABLE product_tag (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   product_id INT,
   tag_id INT,
   FOREIGN KEY (product_id) REFERENCES products(id),
