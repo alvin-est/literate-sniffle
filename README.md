@@ -12,7 +12,7 @@ A back-end for an e-commerce website. It uses Express.js APIs along with Sequeli
 Install by cloning the repo and running with NodeJS. Also make sure PostgreSQL is installed.
 1. Clone the repo
 2. Navigate to the folder via Terminal/Command-Line
-3. In terminal run the commands:
+3. In terminal run the following commands:
       - psql -u [your_postgres_username] (also enter your password)
       - \i db/schema.sql
 4. Run the commands "npm i" and "npm run seed" + "npm run start"
